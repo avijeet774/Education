@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophitorium Engineering College</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/89b1c2940e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+       <div class="formBox">
+        <h1 id="title">LOGIN</h1>
+           <form>
+               <div class="inputGroup" id="nameField">
+                    <div class="inputField" id="inpfi">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Enter Name Here">
+                    </div>
+                    <div class="inputField">
+                        <i class="fas fa-envelope-square"></i>
+                        <input type="email" placeholder="Enter mail Here">
+                    </div>
+                    <div class="inputField">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Enter password Here">
+                    </div>
+                    <p>Forgot Password !!<a href="#">Click Here !</a></p>
+               </div>
+               <div class="btnField">
+                <button type="button" id="signupBtn">Sign Up</button>
+                <button type="button" class="disable" id="signinBtn">Sign In</button>
+               </div>
+           </form>
+       </div>
+    </div>
+    <script>
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("nameField");
+        let title = document.getElementById("title");
+
+        signinBtn.onclick=function(){
+            nameField.style.maxHeight = "0";
+            title.innerHTML="Sign In";
+            let var1=document.getElementById("inpfi");
+            var1.style.display="none";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+        signupBtn.onclick=function(){
+            nameField.style.maxHeight = "60px";
+            title.innerHTML="Sign Up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+</body>
+</html>
